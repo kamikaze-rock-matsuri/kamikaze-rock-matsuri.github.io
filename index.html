@@ -70,9 +70,14 @@
 
 <style>
 .blink {
-    animation: blink-animation 0.3s steps(2, start) infinite;
+    animation: blink-animation 0.4s steps(2, start) infinite;
+}
+    
+.blink:hover {
+    animation: blink-animation 0.2s steps(2, start) infinite;
 }
 
+    
 @keyframes blink-animation {
     to {
         visibility: hidden;
