@@ -52,6 +52,7 @@
     
     <hr>
 <marquee behavior="scroll" direction="left" style="font-size: 36px;">
+<span class="blink">
 <span style="color:red;">R</span>
 <span style="color:orange;">o</span>
 <span style="color:yellow;">c</span>
@@ -64,7 +65,20 @@
 <span style="color:yellow;">l</span>
 <span style="color:green;">l</span>
 <span style="color:blue;">♪</span>
+</span>
 </marquee>
+
+<style>
+.blink {
+    animation: blink-animation 0.3s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+</style>
     <!-- メニュー縦並び -->
     <div class="menu">
     <a href="about.html"><img src="image/about.png"></a>
