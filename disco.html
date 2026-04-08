@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ディスコグラフィ - 神風ロック祭り</title>
+    <style>
+        body {
+            background-color: #87CEFA;
+            font-family: "MS PGothic", monospace;
+            color: #000000;
+            text-align: center;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("images/logo_kamikazekun_en.jpg");
+            background-repeat: repeat;
+            background-size: 240px;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 30px;
+            color: #FF4500;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0000FF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .menu a {
+            display: block;
+            margin: 15px 0;
+        }
+
+        /* ディスコグラフィ */
+        .discography {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .album {
+            display: flex;
+            gap: 20px;
+            border: 3px double #000;
+            background-color: rgba(255,255,255,0.8);
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .album img {
+            width: 150px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .tracklist {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .tracklist li {
+            margin-bottom: 5px;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 600px) {
+            .album {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .album img {
+                width: 80%;
+            }
+
+            .tracklist {
+                text-align: left;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>ディスコグラフィ</h1>
+<hr>
+
+<!-- メニュー -->
+<div class="menu">
+    <a href="index.html"><img src="images/back.png"></a>
+
+</div>
+
+<!-- ディスコグラフィ本体 -->
+<div class="discography">
+
+    <!-- アルバム1 -->
+    <div class="album">
+        <img src="images/album1.jpg" alt="アルバム1">
+
+        <div class="info">
+            <h2>アルバムタイトル</h2>
+            <p>2025年リリース</p>
+
+            <ul class="tracklist">
+                <li><a href="#">1. 曲タイトル</a></li>
+                <li><a href="#">2. 曲タイトル</a></li>
+                <li><a href="#">3. 曲タイトル</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- アルバム2 -->
+    <div class="album">
+        <img src="images/album2.jpg" alt="アルバム2">
+
+        <div class="info">
+            <h2>セカンドアルバム</h2>
+            <p>2026年リリース</p>
+
+            <ul class="tracklist">
+                <li><a href="#">1. 曲タイトル</a></li>
+                <li><a href="#">2. 曲タイトル</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
