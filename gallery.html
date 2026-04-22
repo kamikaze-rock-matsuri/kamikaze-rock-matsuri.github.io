@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ギャラリー - 神風ロック祭り</title>
+
+<style>
+body {
+    background-color: #2b2b2b;
+    font-family: "MS PGothic", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* 壁 */
+.wall {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("images/wall_texture.jpg"); /* コンクリ壁画像あると最高 */
+    background-size: cover;
+}
+
+/* 写真（共通） */
+.photo {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+    transition: 0.2s;
+}
+
+.photo img {
+    display: block;
+    max-width: 200px;
+    height: auto;
+}
+
+/* ホバーでちょい拡大 */
+.photo:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+/* ===== 個別配置（ここ増やす） ===== */
+
+/* 1枚目 */
+.photo1 {
+    top: 50px;
+    left: 30px;
+    transform: rotate(-8deg);
+}
+
+/* 2枚目（追加例） */
+.photo2 {
+    top: 200px;
+    left: 200px;
+    transform: rotate(5deg);
+}
+
+/* 3枚目（追加例） */
+.photo3 {
+    top: 400px;
+    left: 80px;
+    transform: rotate(-3deg);
+}
+
+/* バナー */
+.banner {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    background: red;
+    color: #fff;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    z-index: 100;
+}
+
+/* 戻る */
+.menu {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 100;
+}
+</style>
+</head>
+
+<body>
+
+<div class="banner">GALLERY</div>
+
+<div class="wall">
+
+    <!-- 写真1 -->
+    <div class="photo photo1">
+        <img src="images/photo001.jpg">
+    </div>
+
+    <!-- 追加するときはコピペ -->
+    <!--
+    <div class="photo photo2">
+        <img src="images/photo002.jpg">
+    </div>
+    -->
+
+</div>
+
+<div class="menu">
+    <a href="index.html"><img src="images/back.png"></a>
+</div>
+
+</body>
+</html>
