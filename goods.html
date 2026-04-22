@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>グッズ - 神風ロック祭り</title>
+
+<style>
+body {
+    background-color: #87CEFA;
+    font-family: "MS PGothic", monospace;
+    color: #000000;
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/logo_kamikazekun_en.jpg");
+    background-repeat: repeat;
+    background-size: 240px;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 30px;
+    color: #FF4500;
+}
+
+a {
+    text-decoration: none;
+    color: #0000FF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== グッズグリッド ===== */
+.goods {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+/* タブレット */
+@media (min-width: 600px) {
+    .goods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* PC */
+@media (min-width: 1000px) {
+    .goods {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== カード ===== */
+.item {
+    border: 3px double #000;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item h2 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* メニュー */
+.menu a {
+    display: block;
+    margin: 20px 0;
+}
+</style>
+</head>
+
+<body>
+
+<h1>公式グッズ</h1>
+<hr>
+
+<div class="goods">
+
+<!-- ここからテンプレ12個 -->
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">
+説明テキスト<br>
+説明テキスト<br>
+説明テキスト
+</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+<div class="item">
+<img src="images/sample.jpg">
+<h2>グッズ名</h2>
+<div class="price">¥0000</div>
+<div class="desc">説明テキスト</div>
+</div>
+
+</div>
+
+<div class="menu">
+<a href="index.html"><img src="images/back.png"></a>
+</div>
+
+<div style="font-size:16px;">
+© 2026 神風ロック祭り<br>
+All Rock'n Roll Reserved.
+</div>
+
+</body>
+</html>
