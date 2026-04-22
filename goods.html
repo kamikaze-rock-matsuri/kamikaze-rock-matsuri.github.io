@@ -96,6 +96,42 @@ a:hover {
     display: block;
     margin: 20px 0;
 }
+/* 投げ銭グッズ */
+.donation {
+    width: 90%;
+    margin: 40px auto;
+    border: 3px dashed #000;
+    background-color: rgba(255,255,255,0.8);
+    padding: 15px;
+}
+
+.donation h2 {
+    margin-bottom: 10px;
+}
+
+.donation-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.donation-images img {
+    width: 150px;
+    height: auto;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+    .donation-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .donation-images img {
+        width: 60%;
+    }
+}    
 </style>
 </head>
 
@@ -194,6 +230,31 @@ a:hover {
 <h2>グッズ名</h2>
 <div class="price">¥0000</div>
 <div class="desc">説明テキスト</div>
+</div>
+
+</div>
+
+    <!-- 投げ銭エリア -->
+<div class="donation">
+
+<h2>投げ銭について</h2>
+
+<p>
+ライブ会場で投げ銭を実施しています。<br>
+100円以上入れてくれた方には<br>
+バッジ or ステッカーをプレゼント！
+</p>
+
+<div class="donation-images">
+    <div>
+        <img src="images/badge.jpg" alt="バッジ">
+        <p>オリジナルバッジ</p>
+    </div>
+
+    <div>
+        <img src="images/sticker.jpg" alt="ステッカー">
+        <p>オリジナルステッカー</p>
+    </div>
 </div>
 
 </div>
