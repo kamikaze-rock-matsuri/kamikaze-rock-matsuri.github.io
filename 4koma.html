@@ -100,6 +100,64 @@ h1 {
 .back a:hover {
     text-shadow: 0 0 10px cyan;
 }
+
+/* 画像が未完成でも“それっぽく見せる” */
+
+img {
+    background: linear-gradient(135deg, rgba(255,0,255,0.08), rgba(0,255,255,0.08));
+    min-height: 220px;
+    display: block;
+    position: relative;
+    border: 2px dashed rgba(255,255,255,0.2);
+}
+
+/* 画像読み込み失敗時の擬似表示 */
+img:before {
+    content: "SIGNAL LOST / IMAGE NOT FOUND";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* ほんの少し揺らす */
+img {
+    animation: noiseShift 6s infinite;
+}
+
+@keyframes noiseShift {
+    0% { filter: hue-rotate(0deg) contrast(1); }
+    50% { filter: hue-rotate(20deg) contrast(1.1); }
+    100% { filter: hue-rotate(0deg) contrast(1); }
+}
+
+/* 画像ホバー時＝一瞬だけ“復帰しそうになる” */
+img:hover {
+    filter: brightness(1.3) contrast(1.3);
+    transform: scale(1.01);
+    transition: 0.2s;
+}    
+
+.imgwrap {
+    position: relative;
+}
+
+.fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    letter-spacing: 2px;
+    pointer-events: none;
+}    
+    
 </style>
 </head>
 
@@ -110,21 +168,17 @@ h1 {
 <div class="gallery">
 
     <div class="panel">
-        <img src="images/4koma1.jpg" alt="4コマ1">
+    <div class="imgwrap">
+        <img src="images/4koma1.jpg" alt="待ってね">
+        <div class="fallback">SIGNAL LOST / IMAGE NOT FOUND</div>
     </div>
-
-    <div class="panel">
-        <img src="images/4koma2.jpg" alt="4コマ2">
+</div>
+<div class="panel">
+    <div class="imgwrap">
+        <img src="images/4koma2.jpg" alt="待ってね">
+        <div class="fallback">SIGNAL LOST / IMAGE NOT FOUND</div>
     </div>
-
-    <div class="panel">
-        <img src="images/4koma3.jpg" alt="4コマ3">
-    </div>
-
-    <div class="panel">
-        <img src="images/4koma4.jpg" alt="4コマ4">
-    </div>
-
+</div>
     <!-- ここから増殖ゾーン -->
     <!-- 4koma5.jpg, 6.jpg...をそのまま追加 -->
 
