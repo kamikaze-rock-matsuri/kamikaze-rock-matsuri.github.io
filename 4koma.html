@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>4KOMA // KAMIKAZE NIGHT STREAM</title>
+
+<style>
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #050010, #000000);
+    font-family: "MS PGothic", monospace;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* うっすらノイズ層 */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("images/noise.png");
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+/* タイトル（読ませる気ない） */
+h1 {
+    text-align: center;
+    margin: 30px;
+    font-size: 28px;
+    letter-spacing: 6px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px cyan, 0 0 20px magenta;
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* ギャラリー本体 */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* 画像ブロック */
+.panel {
+    position: relative;
+    max-width: 700px;
+    transform: rotate(-1deg);
+    transition: 0.2s;
+}
+
+/* たまに逆回転 */
+.panel:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+/* ホバーで少しズレる（幻惑） */
+.panel:hover {
+    transform: scale(1.02) rotate(0deg);
+    filter: contrast(1.2) brightness(1.1);
+}
+
+/* 画像 */
+.panel img {
+    width: 100%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px rgba(255,0,255,0.3);
+}
+
+/* 微妙な残像っぽい演出 */
+.panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.05);
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* 戻るリンク */
+.back {
+    text-align: center;
+    margin: 50px;
+    font-size: 18px;
+}
+
+.back a {
+    color: cyan;
+    text-decoration: none;
+}
+
+.back a:hover {
+    text-shadow: 0 0 10px cyan;
+}
+</style>
+</head>
+
+<body>
+
+<h1>4KOMA STREAM</h1>
+
+<div class="gallery">
+
+    <div class="panel">
+        <img src="images/4koma1.jpg" alt="4コマ1">
+    </div>
+
+    <div class="panel">
+        <img src="images/4koma2.jpg" alt="4コマ2">
+    </div>
+
+    <div class="panel">
+        <img src="images/4koma3.jpg" alt="4コマ3">
+    </div>
+
+    <div class="panel">
+        <img src="images/4koma4.jpg" alt="4コマ4">
+    </div>
+
+    <!-- ここから増殖ゾーン -->
+    <!-- 4koma5.jpg, 6.jpg...をそのまま追加 -->
+
+</div>
+
+<div class="back">
+    <a href="kakushi.html">← 隠しトップに戻る</a>
+</div>
+
+</body>
+</html>
