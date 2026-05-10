@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>管理人雑記 // NOISE LOG</title>
+
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #000010, #120018);
+    font-family: "MS PGothic", monospace;
+    color: #eaeaff;
+    overflow-x: hidden;
+}
+
+/* 全体ゆらぎ */
+body {
+    animation: drift 8s infinite;
+}
+
+@keyframes drift {
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(15deg); }
+    100% { filter: hue-rotate(0deg); }
+}
+
+/* タイトル */
+h1 {
+    text-align: center;
+    margin: 30px;
+    font-size: 34px;
+    letter-spacing: 6px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* ログ本体 */
+.log {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 1ポスト */
+.post {
+    margin: 20px 0;
+    padding: 10px;
+    border-left: 3px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.03);
+    transform: rotate(-0.3deg);
+    transition: 0.2s;
+}
+
+.post:nth-child(even) {
+    transform: rotate(0.3deg);
+}
+
+.post:hover {
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.08);
+}
+
+/* 日付 */
+.date {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* 本文 */
+.text {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* 空白ポスト */
+.empty {
+    color: #555;
+    font-style: italic;
+}
+
+/* 戻る */
+.back {
+    text-align: center;
+    margin: 40px;
+}
+
+.back a {
+    color: cyan;
+    text-decoration: none;
+}
+
+.back a:hover {
+    text-shadow: 0 0 10px cyan;
+}
+</style>
+</head>
+
+<body>
+
+<h1>NOISE LOG</h1>
+
+<div class="log">
+
+    <div class="post">
+        <div class="date">2026/05/10</div>
+        <div class="text">ホームページ触りたい欲が出たのでここに逃がす</div>
+    </div>
+
+    <div class="post">
+        <div class="date">2026/05/09</div>
+        <div class="text">ベースの音がちょっとだけ未来にズレてた気がする</div>
+    </div>
+
+    <div class="post">
+        <div class="date">2026/05/08</div>
+        <div class="text empty">（何も書かれていないログ）</div>
+    </div>
+
+    <div class="post">
+        <div class="date">UNKNOWN</div>
+        <div class="text">コンビニの光がやけに強かった日がある</div>
+    </div>
+
+    <div class="post">
+        <div class="date">2026/05/07</div>
+        <div class="text">ドラムが少しだけ現実のテンポを超えた</div>
+    </div>
+
+    <div class="post">
+        <div class="date">ERROR</div>
+        <div class="text">この記録は一部欠損しています</div>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="index.html">← 平和な世界に戻る</a>
+</div>
+
+</body>
+</html>
