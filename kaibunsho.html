@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>怪文書</title>
+
+<style>
+body{
+    background:#000000;
+    color:#cfcfcf;
+    font-family:"MS PGothic",monospace;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.container{
+    width:760px;
+    margin:40px auto;
+    border:1px solid #444;
+    background:#050505;
+    padding:20px;
+    box-shadow:0 0 20px #111;
+}
+
+.title{
+    text-align:center;
+    font-size:48px;
+    color:#ffffff;
+    letter-spacing:12px;
+    margin-top:20px;
+    margin-bottom:10px;
+    text-shadow:0 0 10px #888;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:12px;
+    color:#666;
+    margin-bottom:40px;
+}
+
+.warning{
+    border:1px dashed #555;
+    padding:12px;
+    margin-bottom:40px;
+    background:#0a0a0a;
+    color:#999;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.log{
+    margin-bottom:40px;
+}
+
+.entry{
+    margin-bottom:18px;
+    padding-bottom:12px;
+    border-bottom:1px dotted #222;
+}
+
+.entry a{
+    color:#8ab4ff;
+    text-decoration:none;
+}
+
+.entry a:hover{
+    color:#ffffff;
+    text-decoration:underline;
+}
+
+.date{
+    color:#666;
+    font-size:12px;
+    margin-right:10px;
+}
+
+.footer{
+    margin-top:60px;
+    text-align:center;
+    color:#444;
+    font-size:11px;
+    line-height:1.8;
+}
+
+.blink{
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
+.marquee{
+    color:#444;
+    margin-top:20px;
+    white-space:nowrap;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+.marquee span{
+    display:inline-block;
+    padding-left:100%;
+    animation:marquee 18s linear infinite;
+}
+
+@keyframes marquee{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+怪文書
+</div>
+
+<div class="subtitle">
+KAIBUNSHO ARCHIVE ver.0.0.1
+</div>
+
+<div class="warning">
+※このページには筆者の偏った思想、深夜テンション、長文、フリーゲームへの異常な執着、
+突然のノスタルジー、インターネット老人会的表現などが含まれています。<br>
+閲覧によって生じた情緒不安定・徹夜・創作意欲の暴走等について、当方は一切の責任を負いません。
+</div>
+
+<div class="log">
+
+<div class="entry">
+<span class="date">2026.05.11</span>
+<a href="ruina.html">Ruinaという呪いについて</a>
+</div>
+
+<div class="entry">
+<span class="date">2026.05.08</span>
+<a href="internet.html">なぜ個人サイトは滅びたのか</a>
+</div>
+
+<div class="entry">
+<span class="date">2026.05.03</span>
+<a href="forklift.html">フォークリフト運転中に考えていたこと</a>
+</div>
+
+<div class="entry">
+<span class="date">2026.04.29</span>
+<a href="midnight.html">深夜2時のコンビニは世界の外側にある</a>
+</div>
+
+<div class="entry">
+<span class="date">2026.04.22</span>
+<a href="memo.html">テキストサイト文化の亡霊</a>
+</div>
+
+</div>
+
+<center>
+<img src="under_construction.gif">
+</center>
+
+<div class="marquee">
+<span>
+WELCOME TO THE DARK SIDE OF PERSONAL WEBSITE...
+WELCOME TO THE DARK SIDE OF PERSONAL WEBSITE...
+</span>
+</div>
+
+<div class="footer">
+このページは気分で更新されます。<br>
+突然全て消える可能性があります。<br><br>
+
+<span class="blink">● REC</span>
+</div>
+
+</div>
+
+</body>
+</html>
