@@ -192,6 +192,63 @@
                 height: auto;
             }
         }
+
+    /* スケジュール横並び */
+
+    .schedule-wrap{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+        flex-wrap:wrap;
+        margin:30px auto;
+    }
+
+    .schedule{
+        margin:0;
+    }
+
+    .schedule img{
+        width:100%;
+        max-width:480px;
+        border:5px ridge silver;
+        box-shadow:4px 4px 0px #888;
+    }
+
+    /* NEWS欄 */
+
+    .newsbox{
+        width:80%;
+        max-width:700px;
+        margin:40px auto;
+        border:4px ridge silver;
+        background:#fff8dc;
+        padding:12px 20px;
+
+        box-shadow:
+            inset 2px 2px 0px #fff,
+            inset -2px -2px 0px #888,
+            4px 4px 0px #666;
+    }
+
+    .news-title{
+        font-size:32px;
+        color:#FF1493;
+        margin-bottom:15px;
+        font-weight:bold;
+        text-shadow:1px 1px 0px white;
+    }
+
+    .news-entry{
+        font-size:20px;
+        padding:8px 0;
+    border-bottom:1px dashed #999;
+    }
+
+    .news-date{
+        color:#666;
+        margin-right:10px;
+        font-size:16px;
+    }
         
     </style>
 
@@ -272,9 +329,18 @@
 </style>
     <!-- スケジュール -->
     <!-- updateだ -->
-    <div class="schedule">
-        <img src="images/202605-2.jpg?v=2" alt="スケジュール" width="600">
+    <div class="schedule-wrap">
+
+        <div class="schedule">
+            <img src="images/202605-2.jpg?v=2" alt="2026年5月スケジュール">
+        </div>
+
+        <div class="schedule">
+            <img src="images/202606.jpg?v=1" alt="2026年6月スケジュール">
+        </div>
+
     </div>
+    
     <br>
     <span style="font-size: 26px;">詳細はInstagramにて↓</span>
 
@@ -285,6 +351,31 @@
     <a href="https://www.instagram.com/kamikaze_6_9/" target="_blank">Instagram</a>
     <a href="https://www.youtube.com/channel/UCI2QrO0LmPOF54aZ8bYk4zw" target="_blank">YouTube</a>
     <a href="https://www.tunecore.co.jp/artists/kamikaze.rock.matsuri" target="_blank" class="music">♪音楽を聴く♪</a>
+</div>
+
+<!-- NEWS -->
+
+<div class="newsbox">
+
+<div class="news-title">
+★ NEWS ★
+</div>
+
+<div class="news-entry">
+<span class="news-date">2026.05.23</span>
+ホームページ改装中！
+</div>
+
+<div class="news-entry">
+<span class="news-date">2026.05.20</span>
+6月ライブ情報追加
+</div>
+
+<div class="news-entry">
+<span class="news-date">2026.05.18</span>
+怪文書コンテンツ準備中…
+</div>
+
 </div>
     
     <!-- ライブ履歴バナー -->
